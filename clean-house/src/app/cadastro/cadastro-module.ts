@@ -22,8 +22,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Necessári
     CadastroRoutingModule,
     FormsModule, // Para usar ngModel (opcional, mas recomendado)
     ReactiveFormsModule, // Para usar Reactive Forms (melhor prática)
-
-    // IMPORTS DO ANGULAR MATERIAL
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
