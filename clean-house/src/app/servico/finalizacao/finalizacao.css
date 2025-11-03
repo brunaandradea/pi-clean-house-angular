@@ -1,0 +1,132 @@
+.service-detail-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* Fundo cinza claro */
+  min-height: calc(100vh - 120px); /* Ajusta a altura mínima */
+}
+
+.service-detail-card {
+  width: 100%;
+  max-width: 800px; /* Largura máxima da tela */
+  padding: 20px;
+}
+
+.card-title-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.card-title-header mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Informações do Prestador de Serviço (Silvana) */
+.service-provider-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.provider-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid #ddd;
+}
+
+.provider-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.star-rating mat-icon {
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+.star-rating .mat-warn { /* Estrela preenchida */
+  color: gold; 
+}
+
+.price {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.section-divider {
+  margin: 30px 0;
+  border-color: #eee;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex; /* Para alinhar o título com o botão de salvar */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.save-address-btn {
+  background-color: #4CAF50; /* Cor verde para o botão de salvar */
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: none;
+}
+
+/* Layout dos campos do formulário */
+.form-row {
+  display: flex;
+  gap: 20px; /* Espaço entre os campos */
+  margin-bottom: 20px;
+  align-items: flex-end; /* Alinha os campos no final */
+}
+
+.full-width {
+  flex: 1; /* Ocupa todo o espaço disponível */
+}
+
+.medium-input {
+  flex: 2; /* Ocupa 2/3 do espaço */
+}
+
+.small-input {
+  flex: 1; /* Ocupa 1/3 do espaço */
+}
+
+/* Ícone de calendário ao lado da data */
+.icon-calendar {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 15px; /* Alinha com os campos */
+}
+
+/* Botão Solicitar */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.solicitar-btn {
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #213A78; /* Azul escuro */
+  color: white;
+  text-transform: uppercase;
+}

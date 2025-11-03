@@ -1,0 +1,93 @@
+<div class="service-detail-container">
+  <mat-card class="service-detail-card">
+    <mat-card-header class="card-title-header">
+      <mat-card-title>Detalhes do serviço</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="service-provider-info">
+        <img src="silvana_clean.png" alt="Silvana" class="provider-avatar">
+        <div class="provider-details">
+          <h3>Silvana (43)</h3>
+          <div class="star-rating">
+            <mat-icon color="warn">star</mat-icon>
+            <mat-icon color="warn">star</mat-icon>
+            <mat-icon color="warn">star</mat-icon>
+            <mat-icon color="warn">star</mat-icon>
+            <mat-icon>star</mat-icon>
+          </div>
+          <p class="price">R$ 25 / Hora</p>
+        </div>
+      </div>
+
+      <mat-divider class="section-divider"></mat-divider>
+
+      <h3 class="section-title">Data e Horário</h3>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Data do serviço</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="small-input time-input-field">
+          <mat-label>Hora de Início</mat-label>
+          <input matInput type="time">
+        </mat-form-field>
+      </div>
+
+      <h3 class="section-title">Endereço <button mat-flat-button color="primary" class="save-address-btn">Salvar endereço?</button></h3>
+      <div class="form-row address-row">
+        <mat-form-field appearance="outline" class="medium-input">
+          <mat-label>Rua</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="small-input">
+          <mat-label>Número</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div class="form-row address-row">
+        <mat-form-field appearance="outline" class="medium-input">
+          <mat-label>Bairro</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="small-input">
+          <mat-label>CEP</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <mat-divider class="section-divider"></mat-divider>
+
+      <h3 class="section-title">Forma de pagamento</h3>
+      <div class="form-row payment-row">
+        <mat-form-field appearance="outline" class="medium-input">
+          <mat-label>Número do cartão</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="small-input">
+          <mat-label>CVC</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div class="form-row payment-row">
+        <mat-form-field appearance="outline" class="medium-input">
+          <mat-label>Nome do responsável</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="small-input">
+          <mat-label>Data de expiração</mat-label>
+          <input matInput [matDatepicker]="expPicker">
+          <mat-datepicker-toggle matSuffix [for]="expPicker"></mat-datepicker-toggle>
+          <mat-datepicker #expPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <button mat-raised-button color="primary" class="solicitar-btn">Solicitar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
