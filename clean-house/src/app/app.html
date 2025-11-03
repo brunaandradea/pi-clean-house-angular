@@ -1,0 +1,87 @@
+<mat-toolbar class="header-top">
+  <div class="header-top-content">
+    
+    <div class="logo-area">
+      <img src="Logo.png" alt="Clean House Logo" height="30" class="header-logo">
+      <span class="app-name">Clean House</span>
+    </div>
+    
+    <span class="spacer"></span> <div class="search-container">
+      <input placeholder="Pesquise aqui" type="text" class="search-input">
+      <mat-icon class="search-icon">search</mat-icon>
+    </div>
+
+    <span class="spacer"></span> <div class="user-area">
+      <mat-icon class="user-icon">account_circle</mat-icon>
+      <span [routerLink]="['/registro']" class="user-text">ENTRE OU CADASTRE-SE</span>
+    </div>
+    
+  </div>
+</mat-toolbar>
+
+<mat-toolbar class="header-nav mat-elevation-z4">
+  <div class="nav-links">
+    <button mat-button class="active" [routerLink]="['/']">Serviços</button>
+    <button mat-button [routerLink]="['/registro']">Procuro Emprego</button>
+    <button mat-button [routerLink]="['/fale-conosco']">Fale conosco</button>
+  </div>
+</mat-toolbar>
+
+<main class="router-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col logo-section">
+      <img src="logo-branco.png" alt="Clean House Logo" height="60" class="footer-logo">
+      <p class="logo-text">Clean House</p>
+      <p class="tagline">Serviços</p>
+      <p class="description">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do sint. Amet minim mollit non deserunt ullamco est sit aliqua.
+      </p>
+      <div class="social-links">
+        <button mat-icon-button class="social-button facebook-icon"><mat-icon>facebook</mat-icon></button>
+        <button mat-icon-button class="social-button twitter-icon"><mat-icon>public</mat-icon></button>
+        <button mat-icon-button class="social-button linkedin-icon"><mat-icon>linkedin</mat-icon></button>
+        <button mat-icon-button class="social-button instagram-icon"><mat-icon>camera_alt</mat-icon></button>
+      </div>
+    </div>
+    
+    <div class="footer-col">
+      <h3>Serviços</h3>
+      <a href="#" class="footer-link">House Cleaning</a><br>
+      <a href="#" class="footer-link">Office Cleaning</a><br>
+      <a href="#" class="footer-link">Window Cleaning</a><br>
+      <a href="#" class="footer-link">Floor Cleaning</a><br>
+    </div>
+    
+    <div class="footer-col">
+      <h3>Links</h3>
+      <a [routerLink]="['/']" class="footer-link">Home</a><br>
+      <a [routerLink]="['/']" class="footer-link">Serviços</a><br>
+      <a [routerLink]="['/procuro-emprego']" class="footer-link">Procuro Emprego</a><br>
+      <a [routerLink]="['/fale-conosco']" class="footer-link">Fale Conosco</a><br>
+    </div>
+    
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <div class="contact-item">
+        <mat-icon>phone</mat-icon>
+        <span>(+55) 9999-9999</span>
+      </div>
+      <div class="contact-item">
+        <mat-icon>email</mat-icon>
+        <span>info@email.com</span>
+      </div>
+      <div class="contact-item">
+        <mat-icon>location_on</mat-icon>
+        <span>Ourinhos, SP</span>
+      </div>
+    </div>
+
+  </div> <div class="copyright">
+    Copyright by Clean House © 2024. All rights reserved.
+  </div>
+</footer>

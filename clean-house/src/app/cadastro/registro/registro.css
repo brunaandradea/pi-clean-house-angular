@@ -1,0 +1,36 @@
+/* Estilos Específicos do Card de Cadastro */
+.main-content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9; /* Fundo levemente cinza */
+  min-height: calc(100vh - 120px); /* Garante que o conteúdo ocupe a maior parte da tela */
+}
+
+.registration-card {
+  width: 500px; /* Largura do formulário */
+  padding: 20px;
+}
+
+.title-cadastro {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.terms-checkbox {
+  margin: 15px 0 25px 0;
+}
+
+.register-button {
+  width: 100%;
+  background-color: #213A78; /* Azul escuro do seu design */
+  font-size: 18px;
+  color: white;
+  padding: 10px 0;
+}
