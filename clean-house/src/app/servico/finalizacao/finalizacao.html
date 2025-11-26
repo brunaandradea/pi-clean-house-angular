@@ -22,6 +22,12 @@
 
       <mat-divider class="section-divider"></mat-divider>
 
+      <form [formGroup]="solicitacaoForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <div class="service-provider-info">
+          </div>
+        <mat-divider class="section-divider"></mat-divider>
+
       <h3 class="section-title">Data e Horário</h3>
       <div class="form-row">
         <mat-form-field appearance="outline" class="full-width">
@@ -89,5 +95,3 @@
     <mat-card-actions class="card-actions">
       <button mat-raised-button color="primary" class="solicitar-btn">Solicitar</button>
     </mat-card-actions>
-  </mat-card>
-</div>

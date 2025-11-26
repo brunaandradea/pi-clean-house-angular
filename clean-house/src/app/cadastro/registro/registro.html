@@ -1,42 +1,54 @@
 <div class="main-content">
   <mat-card class="registration-card">
     <mat-card-header>
-      <mat-card-title>
-        <h2 class="title-cadastro">Cadastrar</h2>
-      </mat-card-title>
+      <mat-card-title class="title-cadastro"><b>Cadastrar</b></mat-card-title>
     </mat-card-header>
-    <mat-card-content>
-      <form class="registration-form">
+
+    <form class="registration-form" [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Email">
+          <input matInput type="email" placeholder="Email" formControlName="email">
+          <mat-error *ngIf="cadastroForm.controls['email'].errors?.['required']">Email é obrigatório.</mat-error>
+          <mat-error *ngIf="cadastroForm.controls['email'].errors?.['email']">Email inválido.</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Nome Completo</mat-label>
-          <input matInput placeholder="Nome Completo">
+          <input matInput placeholder="Nome completo" formControlName="nomeCompleto">
+          <mat-error *ngIf="cadastroForm.controls['nomeCompleto'].errors?.['required']">Nome é obrigatório.</mat-error>
+          <mat-error *ngIf="cadastroForm.controls['nomeCompleto'].errors?.['minlength']">Mínimo 3 caracteres.</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Telefone</mat-label>
-          <input matInput placeholder="Telefone">
+          <input matInput placeholder="Telefone" formControlName="telefone">
+          <mat-error *ngIf="cadastroForm.controls['telefone'].errors?.['required']">Telefone é obrigatório.</mat-error>
+          <mat-error *ngIf="cadastroForm.controls['telefone'].errors?.['pattern']">Telefone inválido.</mat-error>
         </mat-form-field>
-
+        
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>CPF</mat-label>
-          <input matInput placeholder="CPF">
+          <input matInput placeholder="CPF" formControlName="cpf">
+          <mat-error *ngIf="cadastroForm.controls['cpf'].errors?.['required']">CPF é obrigatório.</mat-error>
+          <mat-error *ngIf="cadastroForm.controls['cpf'].errors?.['pattern']">CPF inválido. Use 000.000.000-00.</mat-error>
         </mat-form-field>
-
+        
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Senha</mat-label>
-          <input matInput type="password" placeholder="Senha">
+          <input matInput type="password" placeholder="Senha" formControlName="senha">
+          <mat-error *ngIf="cadastroForm.controls['senha'].errors?.['required']">Senha é obrigatória.</mat-error>
+          <mat-error *ngIf="cadastroForm.controls['senha'].errors?.['minlength']">Mínimo 6 caracteres.</mat-error>
         </mat-form-field>
 
-        <mat-checkbox class="terms-checkbox">Aceito e concordo com os Termos de uso.</mat-checkbox>
+        <mat-checkbox class="terms-checkbox" formControlName="aceitoTermos">
+          Aceito e concordo com os Termos de uso.
+        </mat-checkbox>
+        <mat-error *ngIf="cadastroForm.controls['aceitoTermos'].errors?.['requiredTrue'] && cadastroForm.controls['aceitoTermos'].touched">Você deve aceitar os termos.</mat-error>
+      </mat-card-content><br>
 
-        <button mat-raised-button color="primary" class="register-button">Cadastrar</button>
-
-      </form>
-    </mat-card-content>
+      <button mat-raised-button color="primary" class="register-button">Cadastrar</button>
+    </form>
   </mat-card>
 </div>

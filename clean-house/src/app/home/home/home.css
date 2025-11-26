@@ -12,7 +12,6 @@
 /* --- SEÇÃO 1: HERO BANNER --- */
 .hero-banner {
   background-color: #213A78;
-  background-image: url('carrossel.png');
   background-size: cover;
   background-position: center top;
   height: 500px; /* Altura do banner */
